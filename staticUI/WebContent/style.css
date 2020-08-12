@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+.greybg{
+	background-color: grey;
+	height: 90px;
+}
+.second {
+
+}
+.yellowbg {
+	background-color: yellow;
+	height: 700px;
+}
+.lightgreybg {
+	background-color: lightgrey;
+	height: 700px;
+}
+.pic {
+	height: 90px;
+	width: 90px;
+	border-radius: 180%;
+	margin-left: 15px;
+}
+.header {
+	padding-top: 25px;
+	font-size: 23pt;
+	margin-left: 40px;
+}
+.buttons {
+	
+	margin-left: 70px;
+	margin-top: 25px;
+}
+.bulletpoints {
+	margin-top: 45px;
+	margin-left: 10px;
+}
+.space {
+	padding :13px;
+}
+.subheading {
+	margin-top: 25px;
+	font-size: 20pt;
+}
+.photoline {
+	height: 160px;
+	width: 171px;
+	padding-right: 10px;
+}
+.subsubtext {
+	font-size: 20pt;
+	padding-top: 20px;
+}
+.para {
+	margin-bottom: 40px;
+}
+.pagedetails {
+	padding-left: 140px;
+	margin-top: 100px;
+}
