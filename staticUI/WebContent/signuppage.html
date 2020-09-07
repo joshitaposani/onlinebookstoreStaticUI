@@ -3,12 +3,46 @@
 <head>
 	<title>SignUp</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap.css"> 
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script type="text/javascript">
+function f1(){
+	var username = document.getElementById("username").value;
+	if(username == ""){
+		alert("Username can't be empty");
+	}
+	else if (username.length > 14){
+		alert("username cannot have more than 14 characters")
+	}
+}
+function f3(){
+	var password = document.getElementById("password").value;
+	var confirmpass = document.getElementById("confirmpass").value;
+	if (confirmpass != password){
+		alert("Password dosen't match");
+	}
+}
+function f5(){
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	var confirmpass = document.getElementById("confirmpass").value;
+	var address = document.getElementById("address").value;
+	if(username == "" || password == "" || confirmpass == "" || address == ""){
+		alert("few fields are empty");
+	}
+	else if (username != "" && password != "" && confirmpass != "" && address != "") {
+		alert("Account created successfully!!");
+		window.location = "loginpage.html";
+	}
+}
+
+</script>
+	
+	
 </head>
 <body>
 <div class = "row greybg">
 	<div class = "col-md-4">
-		<a href = "homepage.html"><h1 class = "header">Online Book Store</h1></a>
+		<a href = "homepage.html" class = "linkcolor"><h1 class = "header">Online Book Store</h1></a>
 	</div>
 	<div class = "col-md-8">
 		<a href = "loginpage.html"><button type="button" class="btn btn-info buttons">Login</button></a>
@@ -30,13 +64,13 @@
 </div>
 <div class = "col-md-9 lightgreybg">
      <div class = "pagedetails">
-	 <p>username</p><input type="text"><br>
-     <p>password</p><input type="password"><br>
-     <p>confirm password</p><input type = "password"><br><br>
+	 <p>username</p><input type="text" id = "username" name = "username" onblur = "f1()"  ><br>
+     <p>password</p><input type="password" id = "password" name = "password"><br>
+     <p>confirm password</p><input type = "password" id = "confirmpass" name = "confirmpass" onblur = "f3()"><br><br>
      Male<input type = "radio"> 
      Female<input type = "radio"><br><br>
-     <p>Address</p><textarea rows="3" cols="20"></textarea><br><br>
-     <input type="submit" value="signUp">
+     <p>Address</p><textarea rows="3" cols="20" id = "address" name = "address"></textarea><br><br>
+     <button type="submit" onclick = "f5()">signup</button>
      </div>
 </div>	
 </div>

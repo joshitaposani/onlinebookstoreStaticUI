@@ -4,11 +4,26 @@
 	<title>shoppingcart</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css"> 
+	
+	<script type="text/javascript">
+	function f1() {
+		var quantity = document.getElementById("quantity").value;
+		if (quantity == "") {
+			alert("Please enter quantity");
+		}
+		else {
+			window.location.replace("payment.html");
+		}
+	}
+	
+	
+	</script>
+	
 </head>
 <body>
 <div class = "row greybg">
 	<div class = "col-md-4">
-		<a href = "homepage.html"><h1 class = "header">Online Book Store</h1></a>
+		<a href = "homepage.html" class = "linkcolor"><h1 class = "header">Online Book Store</h1></a>
 	</div>
 	<div class = "col-md-8">
 		<a href = "loginpage.html"><button type="button" class="btn btn-info buttons">Login</button></a>
@@ -44,8 +59,8 @@
 <option>MongoDB</option>
 </select>
 <br><br>
-Quantity<input type="number"> <br><br>
-<a href = payment.html><input type = "submit" value= "Proceed"></a>
+Quantity<input type="number" id = "quantity" name = "quantity"> <br><br>
+<input type = "submit" value= "Proceed" onclick = "f1()">
 
      </div>
 </div>

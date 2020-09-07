@@ -4,11 +4,25 @@
 	<title>BooksCatalog</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css"> 
+	<script type="text/javascript">
+	
+	function check () {
+		var chek = confirm("Do you want to continue?");
+		if (chek == true) {
+			window.location.replace("shoppingcart.html");
+		}
+		else {
+			window.location.replace("homepage.html");
+		}
+		
+	}
+	
+	</script>
 </head>
 <body>
 <div class = "row greybg">
 	<div class = "col-md-4">
-		<a href = "homepage.html"><h1 class = "header">Online Book Store</h1></a>
+		<a href = "homepage.html" class = "linkcolor"><h1 class = "header">Online Book Store</h1></a>
 	</div>
 	<div class = "col-md-8">
 		<a href = "loginpage.html"><button type="button" class="btn btn-info buttons">Login</button></a>
@@ -43,7 +57,7 @@ MySQL<br>
 DB2<br>
 MongoDB<br><br>
 <b>TO BUY THESE BOOKS</b><br>
-<a href = "shoppingcart.html"><input type ="Submit" value ="CLICK HERE"></a>
+<input type ="Submit" value ="CLICK HERE" onclick = "check()">
      </div>
 </div>
 </div>

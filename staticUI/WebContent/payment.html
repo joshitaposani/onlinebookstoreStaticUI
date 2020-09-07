@@ -4,6 +4,40 @@
 	<title>payment</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css"> 
+	
+		<script type="text/javascript">
+
+function f4(){
+	var amount = document.getElementById("amount").value;
+	if(amount == ""){
+		alert("please enter amount to be paid");
+	}
+}
+function f5(){
+	var address = document.getElementById("address").value;
+	var contact = document.getElementById("contact").value;
+	var creditcard = document.getElementById("creditcard").value;
+	var amount = document.getElementById("amount").value;
+	if (contact.length != 10 || isNaN(contact) == true) {
+		alert("Please enter the correct contact number");
+	}
+	else {
+	if(address == "" || contact == "" || creditcard == "" || amount == ""){
+		alert("few fields are empty");
+	}
+	else if (address != "" && contact != "" && creditcard != "" && amount != "") {
+		var ask = confirm("Do you want to proceed and pay?");
+		if (ask == true) {
+			window.location.replace("orderconfirmation.html");
+		}
+		else {
+			window.location.replace("bookscatalog.html");
+			}
+		}
+	}
+}
+</script>	
+	
 </head>
 <body>
 <div class = "row greybg">
@@ -31,14 +65,14 @@
 <div class = "col-md-9 lightgreybg">
      <div class = "pagedetails">
       <p>Amount</p>
-      <input type="text">
+      <input type="text" id = "amount" name = "amount" onblur ="f4()"  >
       <p>Delivery Address</p>
-      <input type="text">
+      <input type="text" id = "address" name = "address">
       <p>Contact Number</p>
-      <input type="text">
+      <input type="text" id = "contact" name = "contact" >
       <p>Credit Card Number</p>
-      <input type="text"><br><br>
-      <a href = "orderconfirmation.html"><input type="submit" value="proceed to buy"></a>
+      <input type="text" id = "creditcard" name = "creditcard"><br><br>
+      <input type="submit" value="proceed to buy" onclick = "f5()">
      </div>
 </div>
 </div>
